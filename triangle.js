@@ -31,6 +31,18 @@ function triangle(e1, t1, e2, t2) {
     console.log("Кут має бути між 0 і 90");
     return "failed";
   }
+  
+  const sideTypes = ["leg", "hypotenuse",];
+  
+  if (sideTypes.includes(t1) && e1 <= 0) {
+  console.log("Сторона (катет або гіпотенуза) має бути більшою за 0");
+  return "failed";
+}
+
+if (sideTypes.includes(t2) && e2 <= 0) {
+  console.log("Сторона (катет або гіпотенуза) має бути більшою за 0");
+  return "failed";
+}
 
   const c_angle = 90;
   let a, b, c, a_angle, b_angle;
