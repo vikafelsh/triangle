@@ -5,7 +5,7 @@ console.log("adjacent angle — прилеглий кут");
 console.log("opposite angle — протилежний кут");
 console.log("angle — гострий кут");
 
-function triangle(e1, e2, t1, t2) {
+function triangle(e1, t1, e2, t2) {
 
   if (e1 <= 0 || e2 <= 0) {
     console.log("Сторони та кути повинні бути більшими за 0");
@@ -108,8 +108,6 @@ function triangle(e1, e2, t1, t2) {
       c = e1;
       a_angle = e2;
 
-      b_angle = c_angle - a_angle;
-
       a = c * Math.sin(a_angle * Math.PI / 180);
       b = c * Math.cos(a_angle * Math.PI / 180);
       b_angle = c_angle - a_angle;
@@ -122,8 +120,6 @@ function triangle(e1, e2, t1, t2) {
       a = c * Math.sin(a_angle * Math.PI / 180);
       b = c * Math.cos(a_angle * Math.PI / 180);
    break;
-
-
     
     default:
       console.log("Прочитай інструкцію ще раз");
