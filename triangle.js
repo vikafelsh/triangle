@@ -44,6 +44,13 @@ if (sideTypes.includes(t2) && e2 <= 0) {
   return "failed";
 }
 
+if (a_angle < EPS || b_angle < EPS || 
+    Math.abs(a_angle - 90) < EPS || 
+    Math.abs(b_angle - 90) < EPS) {
+  console.log("Занадто різні сторони");
+  return "failed";
+}
+  
   const c_angle = 90;
   let a, b, c, a_angle, b_angle;
 
