@@ -43,15 +43,6 @@ if (sideTypes.includes(t2) && e2 <= 0) {
   console.log("Сторона (катет або гіпотенуза) має бути більшою за 0");
   return "failed";
 }
-
-const EPS = 0.01;
-  
-if (a_angle < EPS || b_angle < EPS || 
-    Math.abs(a_angle - 90) < EPS || 
-    Math.abs(b_angle - 90) < EPS) {
-  console.log("Занадто різні сторони");
-  return "failed";
-}
   
   const c_angle = 90;
   let a, b, c, a_angle, b_angle;
@@ -146,6 +137,15 @@ if (a_angle < EPS || b_angle < EPS ||
       console.log("Прочитай інструкцію ще раз");
       return "failed";
   }
+
+  const EPS = 0.01;
+  
+if (a_angle < EPS || b_angle < EPS || 
+    Math.abs(a_angle - 90) < EPS || 
+    Math.abs(b_angle - 90) < EPS) {
+  console.log("Занадто різні сторони");
+  return "failed";
+}
 
   if ((angleTypes.includes(t1) && (e1 === 30 || e1 === 60)) || 
   (angleTypes.includes(t2) && (e2 === 30 || e2 === 60))) {
