@@ -44,6 +44,8 @@ if (sideTypes.includes(t2) && e2 <= 0) {
   return "failed";
 }
 
+const EPS = 0.01;
+  
 if (a_angle < EPS || b_angle < EPS || 
     Math.abs(a_angle - 90) < EPS || 
     Math.abs(b_angle - 90) < EPS) {
